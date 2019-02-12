@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  CalculatorApp
 //
-//  Created by 野畑 悠典 on 2019/02/07.
+//  Created by yusuke nohata on 2019/02/07.
 //  Copyright © 2019年 yusuke nohata. All rights reserved.
 //
 
