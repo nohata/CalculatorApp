@@ -16,8 +16,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var outletMessage: UILabel!
     @IBOutlet weak var outletClear: UIButton!
 
-    var LhideNumber:Int?
-    var RhideNumber:Int?
+    var LhideNumber:Double?
+    var RhideNumber:Double?
     var Symbol:String = ""
     var selfanser = false
 
@@ -38,6 +38,7 @@ class ViewController: UIViewController {
 
     @IBAction func inputFormula(_ sender: UIButton) {
         // 数値が押されたら式を表示する
+        outletMessage.text = ""
         guard var formulaText = formulaLabel.text else {
             return
         }
@@ -56,21 +57,21 @@ class ViewController: UIViewController {
         }
         formulaLabel.text = LastformulaText
         if LhideNumber != nil {
-            RhideNumber = Int(LastformulaText)
+            RhideNumber = Double(LastformulaText)
         }
 
     }
 
 
     @IBAction func inputSymbol(_ sender: UIButton) {
-        //記号が入力されたら
+        // + - × ÷ が入力されたら
         initializeColor()
         sender.backgroundColor = UIColor.red
         guard let formulaText = formulaLabel.text else {
             return
         }
         if RhideNumber == nil {
-            LhideNumber = Int(formulaText)
+            LhideNumber = Double(formulaText)
         }
         guard let SymbolText = sender.titleLabel?.text else {
             return
@@ -80,6 +81,30 @@ class ViewController: UIViewController {
             selfanser = true
             self.calculateAnswer(outletAnser)
         }
+    }
+
+    @IBAction func inputPP(_ sender: UIButton) {
+        // % +/-が押されたら
+        guard let formulaText = formulaLabel.text else {
+            return
+        }
+        guard var senderedText = sender.titleLabel?.text else {
+            return
+        }
+        var formatText: String
+        if senderedText == "%" {
+            let formula: String = formulaText + "/100"
+            formatText = evalFormula(formula)
+        } else if senderedText == "+/-" {
+            if formulaText.contains("-") {
+                formatText = formulaText.replacingOccurrences(of: "-", with: "")
+            } else {
+                formatText = "-" + formulaText
+            }
+        } else {
+            formatText = formulaText
+        }
+        formulaLabel.text = formatText
     }
 
     @IBAction func clearCalculation(_ sender: UIButton) {
@@ -104,7 +129,7 @@ class ViewController: UIViewController {
         let formula: String = formatFormula(String(RhideNumberText) + Symbol + String(LhideNumberText))
         let formulaLabelText: String = evalFormula(formula)
         formulaLabel.text = formulaLabelText
-        LhideNumber = Int(formulaLabelText)
+        LhideNumber = Double(formulaLabelText)
         RhideNumber = nil
         if !selfanser {
             Symbol = String()

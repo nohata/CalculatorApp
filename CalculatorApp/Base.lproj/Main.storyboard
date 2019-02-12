@@ -51,7 +51,7 @@
                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="calibratedWhite"/>
                                 <state key="normal" title="+/-"/>
                                 <connections>
-                                    <action selector="inputSymbol:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xR6-Dp-G49"/>
+                                    <action selector="inputPP:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ACw-8J-J41"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zjl-I3-AOw">
@@ -69,7 +69,7 @@
                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="calibratedWhite"/>
                                 <state key="normal" title="%"/>
                                 <connections>
-                                    <action selector="inputSymbol:" destination="BYZ-38-t0r" eventType="touchUpInside" id="h03-7N-Iom"/>
+                                    <action selector="inputPP:" destination="BYZ-38-t0r" eventType="touchUpInside" id="doB-3M-WM5"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GWq-8h-8cG">
@@ -212,8 +212,6 @@
                         <outlet property="outletAnser" destination="e2G-Qp-bMl" id="YOU-fa-rHd"/>
                         <outlet property="outletClear" destination="XtN-jh-ICA" id="ezz-JU-YiP"/>
                         <outlet property="outletMessage" destination="PsG-Ge-DHX" id="Xes-6v-5aj"/>
-                        <outletCollection property="outletSymbol" destination="She-pc-6Cv" collectionClass="NSMutableArray" id="JnK-9B-03c"/>
-                        <outletCollection property="outletSymbol" destination="ip8-LF-hGP" collectionClass="NSMutableArray" id="mnp-Oa-Di0"/>
                         <outletCollection property="outletSymbol" destination="A6B-oP-oBd" collectionClass="NSMutableArray" id="Lsy-aS-pDk"/>
                         <outletCollection property="outletSymbol" destination="JBI-Lj-aIg" collectionClass="NSMutableArray" id="Y06-De-eb2"/>
                         <outletCollection property="outletSymbol" destination="FfP-YX-MRY" collectionClass="NSMutableArray" id="RTo-ld-3OJ"/>
