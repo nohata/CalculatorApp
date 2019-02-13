@@ -1,14 +1,13 @@
 //
-//  NextViewController.swift
-//  CalculatorApp
+//  HelpViewController.swift
+//  Expression
 //
-//  Created by Yusuke Nohata on 2019/02/12.
-//  Copyright © 2019年 yusuke nohata. All rights reserved.
+//  Created by Yusuke Nohata on 2019/02/13.
 //
 
 import UIKit
 
-class NextViewController: UIViewController {
+class HelpViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -16,10 +15,10 @@ class NextViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
-
     @IBAction func back(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }
+
     /*
     // MARK: - Navigation
 

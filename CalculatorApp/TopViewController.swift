@@ -1,14 +1,14 @@
 //
-//  NextViewController.swift
+//  TopViewController.swift
 //  CalculatorApp
 //
-//  Created by Yusuke Nohata on 2019/02/12.
+//  Created by Yusuke Nohata on 2019/02/13.
 //  Copyright © 2019年 yusuke nohata. All rights reserved.
 //
 
 import UIKit
 
-class NextViewController: UIViewController {
+class TopViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -16,10 +16,6 @@ class NextViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
-
-    @IBAction func back(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
-    }
     /*
     // MARK: - Navigation
 
