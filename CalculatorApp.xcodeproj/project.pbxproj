@@ -19,6 +19,8 @@
 		040BA2122213C02A003A6717 /* InformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040BA2112213C02A003A6717 /* InformationViewController.swift */; };
 		040BA2162213D2BD003A6717 /* HelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040BA2152213D2BD003A6717 /* HelpViewController.swift */; };
 		040BA2182213D4BA003A6717 /* EditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040BA2172213D4BA003A6717 /* EditViewController.swift */; };
+		040BA21C2213FB8A003A6717 /* TodoItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040BA21B2213FB8A003A6717 /* TodoItem.swift */; };
+		040BA21E2213FC5C003A6717 /* TodoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040BA21D2213FC5C003A6717 /* TodoListViewController.swift */; };
 		83F80D48B377F95C9105035A /* Pods_CalculatorApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF525B906B70C747FFA14F94 /* Pods_CalculatorApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -58,6 +60,8 @@
 		040BA2112213C02A003A6717 /* InformationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationViewController.swift; sourceTree = "<group>"; };
 		040BA2152213D2BD003A6717 /* HelpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpViewController.swift; sourceTree = "<group>"; };
 		040BA2172213D4BA003A6717 /* EditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditViewController.swift; sourceTree = "<group>"; };
+		040BA21B2213FB8A003A6717 /* TodoItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoItem.swift; sourceTree = "<group>"; };
+		040BA21D2213FC5C003A6717 /* TodoListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListViewController.swift; sourceTree = "<group>"; };
 		217429B9A165D79A71C41931 /* Pods-CalculatorApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CalculatorApp.debug.xcconfig"; path = "Target Support Files/Pods-CalculatorApp/Pods-CalculatorApp.debug.xcconfig"; sourceTree = "<group>"; };
 		5CA7ED1E1195BAA980E798C0 /* Pods-CalculatorApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CalculatorApp.release.xcconfig"; path = "Target Support Files/Pods-CalculatorApp/Pods-CalculatorApp.release.xcconfig"; sourceTree = "<group>"; };
 		FF525B906B70C747FFA14F94 /* Pods_CalculatorApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CalculatorApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -114,17 +118,13 @@
 		040BA1DE220C2348003A6717 /* CalculatorApp */ = {
 			isa = PBXGroup;
 			children = (
+				040BA21A2213F828003A6717 /* Views */,
+				040BA2192213F807003A6717 /* Models */,
 				040BA1DF220C2348003A6717 /* AppDelegate.swift */,
-				040BA1E1220C2348003A6717 /* ViewController.swift */,
-				040BA20D2212BFE1003A6717 /* NextViewController.swift */,
 				040BA1E3220C2348003A6717 /* Main.storyboard */,
-				040BA2112213C02A003A6717 /* InformationViewController.swift */,
-				040BA20F2213A4F2003A6717 /* TopViewController.swift */,
-				040BA2152213D2BD003A6717 /* HelpViewController.swift */,
 				040BA1E6220C2348003A6717 /* Assets.xcassets */,
 				040BA1E8220C2349003A6717 /* LaunchScreen.storyboard */,
 				040BA1EB220C2349003A6717 /* Info.plist */,
-				040BA2172213D4BA003A6717 /* EditViewController.swift */,
 			);
 			path = CalculatorApp;
 			sourceTree = "<group>";
@@ -145,6 +145,29 @@
 				040BA201220C2349003A6717 /* Info.plist */,
 			);
 			path = CalculatorAppUITests;
+			sourceTree = "<group>";
+		};
+		040BA2192213F807003A6717 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				040BA21B2213FB8A003A6717 /* TodoItem.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		040BA21A2213F828003A6717 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				040BA1E1220C2348003A6717 /* ViewController.swift */,
+				040BA20D2212BFE1003A6717 /* NextViewController.swift */,
+				040BA2112213C02A003A6717 /* InformationViewController.swift */,
+				040BA20F2213A4F2003A6717 /* TopViewController.swift */,
+				040BA2152213D2BD003A6717 /* HelpViewController.swift */,
+				040BA2172213D4BA003A6717 /* EditViewController.swift */,
+				040BA21D2213FC5C003A6717 /* TodoListViewController.swift */,
+			);
+			name = Views;
+			path = "New Group";
 			sourceTree = "<group>";
 		};
 		8829AAA67AC5ED8D627304F7 /* Pods */ = {
@@ -303,12 +326,16 @@
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-CalculatorApp/Pods-CalculatorApp-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Expression/Expression.framework",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Expression.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -350,6 +377,8 @@
 				040BA20E2212BFE1003A6717 /* NextViewController.swift in Sources */,
 				040BA1E0220C2348003A6717 /* AppDelegate.swift in Sources */,
 				040BA2122213C02A003A6717 /* InformationViewController.swift in Sources */,
+				040BA21E2213FC5C003A6717 /* TodoListViewController.swift in Sources */,
+				040BA21C2213FB8A003A6717 /* TodoItem.swift in Sources */,
 				040BA2182213D4BA003A6717 /* EditViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

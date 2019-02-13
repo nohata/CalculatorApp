@@ -92,7 +92,7 @@ class ViewController: UIViewController {
         guard let formulaText = formulaLabel.text else {
             return
         }
-        guard var senderedText = sender.titleLabel?.text else {
+        guard let senderedText = sender.titleLabel?.text else {
             return
         }
         var formatText: String

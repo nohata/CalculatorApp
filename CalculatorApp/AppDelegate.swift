@@ -15,18 +15,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var Text: String = ""
 
     func gotoMainStoryBoard(){
-        let flg = true//分岐条件
+        //let flg = true//分岐条件
 
         let storyboard:UIStoryboard = UIStoryboard(name: "Main",bundle:nil)
         let viewController:UIViewController
 
         //表示するビューコントローラーを指定
         //ストーリーボードで遷移先のビューを選択し、IdentityのStoryboard IDに任意の名前を設定
-        if flg {
-            viewController = storyboard.instantiateViewController(withIdentifier: "TopViewController") as UIViewController
-        } else {
-            viewController = storyboard.instantiateViewController(withIdentifier: "ViewController") as UIViewController
-        }
+        // if flg {
+        viewController = storyboard.instantiateViewController(withIdentifier: "TopViewController") as UIViewController
+        // } else {
+        //     viewController = storyboard.instantiateViewController(withIdentifier: "ViewController") as UIViewController
+        // }
 
         window?.rootViewController = viewController
     }
