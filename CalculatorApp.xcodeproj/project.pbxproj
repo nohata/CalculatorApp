@@ -166,8 +166,7 @@
 				040BA2172213D4BA003A6717 /* EditViewController.swift */,
 				040BA21D2213FC5C003A6717 /* TodoListViewController.swift */,
 			);
-			name = Views;
-			path = "New Group";
+			path = Views;
 			sourceTree = "<group>";
 		};
 		8829AAA67AC5ED8D627304F7 /* Pods */ = {
