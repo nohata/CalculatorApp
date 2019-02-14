@@ -17,9 +17,8 @@ class TodoItem: Object {
 
     // idセット
     func SetId() {
-        let realm = try! Realm()
         // if realm.isInWriteTransaction {} で既に書き込みトランザクション内にいるかどうかを判断できる
-        if self.id == 0 { self.id = self.createNewId() }
+        self.id = self.createNewId()
     }
 
     // 新しいIDを採番します。

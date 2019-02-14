@@ -20,7 +20,7 @@ class TodoListViewController: UIViewController {
 
       // RealmのTodoリストを取得し，更新を監視
       realm = try! Realm() // Realmのインスタンスを取得
-      todoList = realm.objects(TodoItem.self)
+      todoList = realm.objects(TodoItem.self).sorted(byKeyPath: "id", ascending: true)
       // token = todoList.observe { [weak self] _ in
       //   self?.reload()
       // }
@@ -94,25 +94,31 @@ class TodoListViewController: UIViewController {
 
     @IBAction func addTapped(_ sender: Any) {
       // 新規Todo追加用のダイアログを表示
-      let dlg = UIAlertController(title: "新規Todo", message: "", preferredStyle: .alert)
+      getAlert(newTodo: true, at: nil)
+    }
+
+    //ダイアログを作成
+    func getAlert(newTodo: Bool, at: Int?) {
+      let AlertTitle: String = newTodo ? "新規Todo" : "編集Todo"
+      let dlg = UIAlertController(title: AlertTitle, message: "", preferredStyle: .alert)
       dlg.addTextField(configurationHandler: nil)
       dlg.addAction(UIAlertAction(title: "OK", style: .default, handler: { action in
         if let t = dlg.textFields![0].text,
           !t.isEmpty {
-          self.addTodoItem(title: t)
+          self.addTodoItem(newTodo: newTodo, title: t, at: at)
         }
       }))
       present(dlg, animated: true)
     }
 
     // Todoを追加
-    func addTodoItem(title: String) {
+    func addTodoItem(newTodo: Bool, title: String, at: Int?) {
       try! realm.write {
         // TodoItemモデルのオブジェクトを取得
-        let todoitem = TodoItem()
-        todoitem.title = title
-        todoitem.SetId()
-        realm.add(todoitem, update: true)
+        let todoitem = newTodo ? TodoItem() : realm.object(ofType: TodoItem.self, forPrimaryKey: at)
+        todoitem?.title = title
+        if newTodo { todoitem?.SetId() }
+        realm.add(todoitem!, update: true)
 
         // まとめて追加
         //realm.add(TodoItem(value: ["title": title]))
@@ -133,35 +139,46 @@ class TodoListViewController: UIViewController {
     func reload() {
       tableView.reloadData()
     }
+
+    @IBAction func back(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
+
 }
 
 extension TodoListViewController: UITableViewDelegate {
 }
 
 extension TodoListViewController: UITableViewDataSource {
-    func numberOfSections(in tableView: UITableView) -> Int {
+    //returnを0にするとセルが表示されない、リターンが１だからセルの"ラベル"が１つ表示
+    func numberOfSections(in table: UITableView) -> Int {
       return 1
     }
 
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    // TableViewに表示するセルの数を返却する
+    func tableView(_ table: UITableView, numberOfRowsInSection section: Int) -> Int {
       return todoList.count
     }
 
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-      let cell = tableView.dequeueReusableCell(withIdentifier: "todoItem", for: indexPath)
-      cell.textLabel?.text = todoList[indexPath.row].title
+    // 各セルを生成して返却する
+    func tableView(_ table: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+      let cell = table.dequeueReusableCell(withIdentifier: "todoItem", for: indexPath)
+      cell.textLabel?.text = "id " + String(todoList[indexPath.row].id) + " title " + String(todoList[indexPath.row].title)
       return cell
     }
 
-    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+    // trueを返すことでCellのアクションを許可
+    func tableView(_ table: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
       return true
     }
 
-    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+    //スワイプで削除
+    func tableView(_ table: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
       deleteTodoItem(at: indexPath.row)
     }
 
-    @IBAction func back(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
+    // Cell が選択された場合
+    func tableView(_ table: UITableView,didSelectRowAt indexPath: IndexPath) {
+      getAlert(newTodo: false, at: todoList[indexPath.row].id)
     }
 }
