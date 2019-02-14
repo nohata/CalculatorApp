@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import RealmSwift
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -20,7 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let storyboard:UIStoryboard = UIStoryboard(name: "Main",bundle:nil)
         let viewController:UIViewController
 
-        //表示するビューコントローラーを指定
+        //最初に表示するビューコントローラーを指定
         //ストーリーボードで遷移先のビューを選択し、IdentityのStoryboard IDに任意の名前を設定
         // if flg {
         viewController = storyboard.instantiateViewController(withIdentifier: "TopViewController") as UIViewController
@@ -33,8 +34,38 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        realmMigration()
         gotoMainStoryBoard()
         return true
+    }
+
+    // Realmのマイグレーション
+    func realmMigration() {
+        let config = Realm.Configuration(
+            // 新しいスキーマバージョンを設定、以前のバージョンより大きくなければならない
+            // スキーマバージョンを設定したことがなければ、最初は0が設定されている
+            schemaVersion: 1,
+
+            // マイグレーション処理を記述
+            // 古いスキーマバージョンのRealmを開こうとすると自動的にマイグレーションが実行される
+            migrationBlock: { migration, oldSchemaVersion in
+                // 最初のマイグレーションの場合、`oldSchemaVersion`は0です
+                if (oldSchemaVersion < 1) {
+                    // プロパティの消去と追加を認識してディスク上のスキーマを自動的にアップデート
+                    // 古いプロパティのデータを新しいプロパティに入れたい場合
+                    var nextID = 0
+                    migration.enumerateObjects(ofType: TodoItem.className()) { oldObject, newObject in
+                        // let firstName = oldObject!["firstName"] as! String
+                        // let lastName = oldObject!["lastName"] as! String
+                        // newObject!["fullName"] = "\(firstName) \(lastName)"
+                        newObject!["id"] = nextID
+                        nextID += 1
+                    }
+                }
+        })
+        // デフォルトRealmに新しい設定を適用
+        Realm.Configuration.defaultConfiguration = config
+        // Realmファイルを開こうとしたときスキーマバージョンが異なれば自動的にマイグレーションが実行される
     }
 
     func applicationWillResignActive(_ application: UIApplication) {

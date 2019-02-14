@@ -158,15 +158,39 @@
 		040BA21A2213F828003A6717 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				040BA1E1220C2348003A6717 /* ViewController.swift */,
-				040BA20D2212BFE1003A6717 /* NextViewController.swift */,
-				040BA2112213C02A003A6717 /* InformationViewController.swift */,
+				04DC90C12214F20D00A94D2A /* todo */,
+				04DC90C02214F1F200A94D2A /* information */,
+				04DC90BF2214F1B200A94D2A /* calculator */,
 				040BA20F2213A4F2003A6717 /* TopViewController.swift */,
-				040BA2152213D2BD003A6717 /* HelpViewController.swift */,
-				040BA2172213D4BA003A6717 /* EditViewController.swift */,
-				040BA21D2213FC5C003A6717 /* TodoListViewController.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		04DC90BF2214F1B200A94D2A /* calculator */ = {
+			isa = PBXGroup;
+			children = (
+				040BA1E1220C2348003A6717 /* ViewController.swift */,
+				040BA20D2212BFE1003A6717 /* NextViewController.swift */,
+			);
+			path = calculator;
+			sourceTree = "<group>";
+		};
+		04DC90C02214F1F200A94D2A /* information */ = {
+			isa = PBXGroup;
+			children = (
+				040BA2112213C02A003A6717 /* InformationViewController.swift */,
+				040BA2152213D2BD003A6717 /* HelpViewController.swift */,
+				040BA2172213D4BA003A6717 /* EditViewController.swift */,
+			);
+			path = information;
+			sourceTree = "<group>";
+		};
+		04DC90C12214F20D00A94D2A /* todo */ = {
+			isa = PBXGroup;
+			children = (
+				040BA21D2213FC5C003A6717 /* TodoListViewController.swift */,
+			);
+			path = todo;
 			sourceTree = "<group>";
 		};
 		8829AAA67AC5ED8D627304F7 /* Pods */ = {
