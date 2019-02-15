@@ -10,22 +10,28 @@ import UIKit
 
 class InformationViewController: UIViewController, EditViewControllerDelegate {
 
-    @IBOutlet weak var textField: UITextField!
+    @IBOutlet weak var outletText: UILabel!
 
     @IBAction func tapEditButton(_ sender: Any) {
         let view = storyboard?.instantiateViewController(withIdentifier: "editViewController") as! EditViewController
-        view.text = textField.text!
+        view.text = outletText.text!
         view.delegate = self
         present(view, animated: true, completion: nil)
     }
 
     func editDidFinished(modalText: String?){
-        textField.text = modalText
+        outletText.text = modalText
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        //　ラベル枠の枠線太さと色
+        outletText.layer.borderColor = UIColor.blue.cgColor
+        outletText.layer.borderWidth = 2
+        // ラベル枠を丸くする
+        outletText.layer.masksToBounds = true
+        // ラベル丸枠の半径
+        outletText.layer.cornerRadius = 10
         // Do any additional setup after loading the view.
     }
 

@@ -35,6 +35,9 @@ class EditViewController: UIViewController {
         // editText.text = appDelegate.Text
     }
 
+    @IBAction func back(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
 
     /*
     // MARK: - Navigation

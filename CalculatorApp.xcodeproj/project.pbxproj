@@ -21,6 +21,9 @@
 		040BA2182213D4BA003A6717 /* EditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040BA2172213D4BA003A6717 /* EditViewController.swift */; };
 		040BA21C2213FB8A003A6717 /* TodoItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040BA21B2213FB8A003A6717 /* TodoItem.swift */; };
 		040BA21E2213FC5C003A6717 /* TodoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040BA21D2213FC5C003A6717 /* TodoListViewController.swift */; };
+		04DC90C322164E7200A94D2A /* ToolViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DC90C222164E7200A94D2A /* ToolViewController.swift */; };
+		04DC90C62216545100A94D2A /* ToolTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DC90C52216545100A94D2A /* ToolTabViewController.swift */; };
+		04DC90C922165D9300A94D2A /* tooltab.png in Resources */ = {isa = PBXBuildFile; fileRef = 04DC90C822165D9300A94D2A /* tooltab.png */; };
 		83F80D48B377F95C9105035A /* Pods_CalculatorApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF525B906B70C747FFA14F94 /* Pods_CalculatorApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -62,6 +65,9 @@
 		040BA2172213D4BA003A6717 /* EditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditViewController.swift; sourceTree = "<group>"; };
 		040BA21B2213FB8A003A6717 /* TodoItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoItem.swift; sourceTree = "<group>"; };
 		040BA21D2213FC5C003A6717 /* TodoListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListViewController.swift; sourceTree = "<group>"; };
+		04DC90C222164E7200A94D2A /* ToolViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolViewController.swift; sourceTree = "<group>"; };
+		04DC90C52216545100A94D2A /* ToolTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolTabViewController.swift; sourceTree = "<group>"; };
+		04DC90C822165D9300A94D2A /* tooltab.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tooltab.png; sourceTree = "<group>"; };
 		217429B9A165D79A71C41931 /* Pods-CalculatorApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CalculatorApp.debug.xcconfig"; path = "Target Support Files/Pods-CalculatorApp/Pods-CalculatorApp.debug.xcconfig"; sourceTree = "<group>"; };
 		5CA7ED1E1195BAA980E798C0 /* Pods-CalculatorApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CalculatorApp.release.xcconfig"; path = "Target Support Files/Pods-CalculatorApp/Pods-CalculatorApp.release.xcconfig"; sourceTree = "<group>"; };
 		FF525B906B70C747FFA14F94 /* Pods_CalculatorApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CalculatorApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -118,6 +124,7 @@
 		040BA1DE220C2348003A6717 /* CalculatorApp */ = {
 			isa = PBXGroup;
 			children = (
+				04DC90C722165B0600A94D2A /* images */,
 				040BA21A2213F828003A6717 /* Views */,
 				040BA2192213F807003A6717 /* Models */,
 				040BA1DF220C2348003A6717 /* AppDelegate.swift */,
@@ -158,6 +165,7 @@
 		040BA21A2213F828003A6717 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				04DC90C422164E8B00A94D2A /* tool */,
 				04DC90C12214F20D00A94D2A /* todo */,
 				04DC90C02214F1F200A94D2A /* information */,
 				04DC90BF2214F1B200A94D2A /* calculator */,
@@ -191,6 +199,23 @@
 				040BA21D2213FC5C003A6717 /* TodoListViewController.swift */,
 			);
 			path = todo;
+			sourceTree = "<group>";
+		};
+		04DC90C422164E8B00A94D2A /* tool */ = {
+			isa = PBXGroup;
+			children = (
+				04DC90C222164E7200A94D2A /* ToolViewController.swift */,
+				04DC90C52216545100A94D2A /* ToolTabViewController.swift */,
+			);
+			path = tool;
+			sourceTree = "<group>";
+		};
+		04DC90C722165B0600A94D2A /* images */ = {
+			isa = PBXGroup;
+			children = (
+				04DC90C822165D9300A94D2A /* tooltab.png */,
+			);
+			path = images;
 			sourceTree = "<group>";
 		};
 		8829AAA67AC5ED8D627304F7 /* Pods */ = {
@@ -319,6 +344,7 @@
 				040BA1EA220C2349003A6717 /* LaunchScreen.storyboard in Resources */,
 				040BA1E7220C2348003A6717 /* Assets.xcassets in Resources */,
 				040BA1E5220C2348003A6717 /* Main.storyboard in Resources */,
+				04DC90C922165D9300A94D2A /* tooltab.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -394,12 +420,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04DC90C62216545100A94D2A /* ToolTabViewController.swift in Sources */,
 				040BA2102213A4F2003A6717 /* TopViewController.swift in Sources */,
 				040BA2162213D2BD003A6717 /* HelpViewController.swift in Sources */,
 				040BA1E2220C2348003A6717 /* ViewController.swift in Sources */,
 				040BA20E2212BFE1003A6717 /* NextViewController.swift in Sources */,
 				040BA1E0220C2348003A6717 /* AppDelegate.swift in Sources */,
 				040BA2122213C02A003A6717 /* InformationViewController.swift in Sources */,
+				04DC90C322164E7200A94D2A /* ToolViewController.swift in Sources */,
 				040BA21E2213FC5C003A6717 /* TodoListViewController.swift in Sources */,
 				040BA21C2213FB8A003A6717 /* TodoItem.swift in Sources */,
 				040BA2182213D4BA003A6717 /* EditViewController.swift in Sources */,
