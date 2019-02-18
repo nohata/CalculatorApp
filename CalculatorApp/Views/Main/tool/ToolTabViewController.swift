@@ -9,7 +9,6 @@
 import UIKit
 
 class ToolTabViewController: UITabBarController {
-
     override func viewDidLoad() {
         super.viewDidLoad()
         //ホームを初期選択にする。
@@ -22,7 +21,7 @@ class ToolTabViewController: UITabBarController {
                 item.badgeValue = "1"
             }
         }
-        // Do any additional setup after loading the view.
+
     }
 
     //ボタン押下時の呼び出しメソッド

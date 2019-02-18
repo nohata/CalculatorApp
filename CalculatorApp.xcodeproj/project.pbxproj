@@ -21,9 +21,16 @@
 		040BA2182213D4BA003A6717 /* EditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040BA2172213D4BA003A6717 /* EditViewController.swift */; };
 		040BA21C2213FB8A003A6717 /* TodoItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040BA21B2213FB8A003A6717 /* TodoItem.swift */; };
 		040BA21E2213FC5C003A6717 /* TodoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040BA21D2213FC5C003A6717 /* TodoListViewController.swift */; };
+		044D22FF221A8B3300FF959F /* first50.png in Resources */ = {isa = PBXBuildFile; fileRef = 044D22FE221A8B3300FF959F /* first50.png */; };
+		044D2301221A8B3B00FF959F /* home50.png in Resources */ = {isa = PBXBuildFile; fileRef = 044D2300221A8B3A00FF959F /* home50.png */; };
 		04DC90C322164E7200A94D2A /* ToolViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DC90C222164E7200A94D2A /* ToolViewController.swift */; };
 		04DC90C62216545100A94D2A /* ToolTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DC90C52216545100A94D2A /* ToolTabViewController.swift */; };
 		04DC90C922165D9300A94D2A /* tooltab.png in Resources */ = {isa = PBXBuildFile; fileRef = 04DC90C822165D9300A94D2A /* tooltab.png */; };
+		04FFCC5A221A517500DCF8C4 /* ToolCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FFCC59221A517500DCF8C4 /* ToolCodeViewController.swift */; };
+		04FFCC5C221A531200DCF8C4 /* First.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04FFCC5B221A531200DCF8C4 /* First.storyboard */; };
+		04FFCC5E221A547400DCF8C4 /* Second.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04FFCC5D221A547400DCF8C4 /* Second.storyboard */; };
+		04FFCC60221A548300DCF8C4 /* Third.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04FFCC5F221A548300DCF8C4 /* Third.storyboard */; };
+		04FFCC62221A55A600DCF8C4 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FFCC61221A55A600DCF8C4 /* FirstViewController.swift */; };
 		83F80D48B377F95C9105035A /* Pods_CalculatorApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF525B906B70C747FFA14F94 /* Pods_CalculatorApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -65,9 +72,16 @@
 		040BA2172213D4BA003A6717 /* EditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditViewController.swift; sourceTree = "<group>"; };
 		040BA21B2213FB8A003A6717 /* TodoItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoItem.swift; sourceTree = "<group>"; };
 		040BA21D2213FC5C003A6717 /* TodoListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListViewController.swift; sourceTree = "<group>"; };
+		044D22FE221A8B3300FF959F /* first50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = first50.png; sourceTree = "<group>"; };
+		044D2300221A8B3A00FF959F /* home50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home50.png; sourceTree = "<group>"; };
 		04DC90C222164E7200A94D2A /* ToolViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolViewController.swift; sourceTree = "<group>"; };
 		04DC90C52216545100A94D2A /* ToolTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolTabViewController.swift; sourceTree = "<group>"; };
 		04DC90C822165D9300A94D2A /* tooltab.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tooltab.png; sourceTree = "<group>"; };
+		04FFCC59221A517500DCF8C4 /* ToolCodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolCodeViewController.swift; sourceTree = "<group>"; };
+		04FFCC5B221A531200DCF8C4 /* First.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = First.storyboard; sourceTree = "<group>"; };
+		04FFCC5D221A547400DCF8C4 /* Second.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Second.storyboard; sourceTree = "<group>"; };
+		04FFCC5F221A548300DCF8C4 /* Third.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Third.storyboard; sourceTree = "<group>"; };
+		04FFCC61221A55A600DCF8C4 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
 		217429B9A165D79A71C41931 /* Pods-CalculatorApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CalculatorApp.debug.xcconfig"; path = "Target Support Files/Pods-CalculatorApp/Pods-CalculatorApp.debug.xcconfig"; sourceTree = "<group>"; };
 		5CA7ED1E1195BAA980E798C0 /* Pods-CalculatorApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CalculatorApp.release.xcconfig"; path = "Target Support Files/Pods-CalculatorApp/Pods-CalculatorApp.release.xcconfig"; sourceTree = "<group>"; };
 		FF525B906B70C747FFA14F94 /* Pods_CalculatorApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CalculatorApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -124,13 +138,12 @@
 		040BA1DE220C2348003A6717 /* CalculatorApp */ = {
 			isa = PBXGroup;
 			children = (
+				044D22F8221A75DF00FF959F /* StoryBoards */,
 				04DC90C722165B0600A94D2A /* images */,
 				040BA21A2213F828003A6717 /* Views */,
 				040BA2192213F807003A6717 /* Models */,
 				040BA1DF220C2348003A6717 /* AppDelegate.swift */,
-				040BA1E3220C2348003A6717 /* Main.storyboard */,
 				040BA1E6220C2348003A6717 /* Assets.xcassets */,
-				040BA1E8220C2349003A6717 /* LaunchScreen.storyboard */,
 				040BA1EB220C2349003A6717 /* Info.plist */,
 			);
 			path = CalculatorApp;
@@ -165,13 +178,51 @@
 		040BA21A2213F828003A6717 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				04DC90C422164E8B00A94D2A /* tool */,
-				04DC90C12214F20D00A94D2A /* todo */,
-				04DC90C02214F1F200A94D2A /* information */,
-				04DC90BF2214F1B200A94D2A /* calculator */,
-				040BA20F2213A4F2003A6717 /* TopViewController.swift */,
+				044D22FA221A763000FF959F /* First */,
+				044D22F9221A761500FF959F /* Main */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		044D22F8221A75DF00FF959F /* StoryBoards */ = {
+			isa = PBXGroup;
+			children = (
+				040BA1E3220C2348003A6717 /* Main.storyboard */,
+				040BA1E8220C2349003A6717 /* LaunchScreen.storyboard */,
+				04FFCC5B221A531200DCF8C4 /* First.storyboard */,
+				04FFCC5D221A547400DCF8C4 /* Second.storyboard */,
+				04FFCC5F221A548300DCF8C4 /* Third.storyboard */,
+			);
+			path = StoryBoards;
+			sourceTree = "<group>";
+		};
+		044D22F9221A761500FF959F /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				044D22FB221A767000FF959F /* toolcode */,
+				040BA20F2213A4F2003A6717 /* TopViewController.swift */,
+				04DC90BF2214F1B200A94D2A /* calculator */,
+				04DC90C02214F1F200A94D2A /* information */,
+				04DC90C12214F20D00A94D2A /* todo */,
+				04DC90C422164E8B00A94D2A /* tool */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		044D22FA221A763000FF959F /* First */ = {
+			isa = PBXGroup;
+			children = (
+				04FFCC61221A55A600DCF8C4 /* FirstViewController.swift */,
+			);
+			path = First;
+			sourceTree = "<group>";
+		};
+		044D22FB221A767000FF959F /* toolcode */ = {
+			isa = PBXGroup;
+			children = (
+				04FFCC59221A517500DCF8C4 /* ToolCodeViewController.swift */,
+			);
+			path = toolcode;
 			sourceTree = "<group>";
 		};
 		04DC90BF2214F1B200A94D2A /* calculator */ = {
@@ -214,6 +265,8 @@
 			isa = PBXGroup;
 			children = (
 				04DC90C822165D9300A94D2A /* tooltab.png */,
+				044D2300221A8B3A00FF959F /* home50.png */,
+				044D22FE221A8B3300FF959F /* first50.png */,
 			);
 			path = images;
 			sourceTree = "<group>";
@@ -341,10 +394,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04FFCC5E221A547400DCF8C4 /* Second.storyboard in Resources */,
 				040BA1EA220C2349003A6717 /* LaunchScreen.storyboard in Resources */,
+				04FFCC5C221A531200DCF8C4 /* First.storyboard in Resources */,
+				044D2301221A8B3B00FF959F /* home50.png in Resources */,
+				04FFCC60221A548300DCF8C4 /* Third.storyboard in Resources */,
 				040BA1E7220C2348003A6717 /* Assets.xcassets in Resources */,
 				040BA1E5220C2348003A6717 /* Main.storyboard in Resources */,
 				04DC90C922165D9300A94D2A /* tooltab.png in Resources */,
+				044D22FF221A8B3300FF959F /* first50.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -423,7 +481,9 @@
 				04DC90C62216545100A94D2A /* ToolTabViewController.swift in Sources */,
 				040BA2102213A4F2003A6717 /* TopViewController.swift in Sources */,
 				040BA2162213D2BD003A6717 /* HelpViewController.swift in Sources */,
+				04FFCC5A221A517500DCF8C4 /* ToolCodeViewController.swift in Sources */,
 				040BA1E2220C2348003A6717 /* ViewController.swift in Sources */,
+				04FFCC62221A55A600DCF8C4 /* FirstViewController.swift in Sources */,
 				040BA20E2212BFE1003A6717 /* NextViewController.swift in Sources */,
 				040BA1E0220C2348003A6717 /* AppDelegate.swift in Sources */,
 				040BA2122213C02A003A6717 /* InformationViewController.swift in Sources */,

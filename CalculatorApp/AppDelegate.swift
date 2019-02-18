@@ -35,7 +35,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         realmMigration()
+
+        let userDefault = UserDefaults.standard
+        // "firstLaunch"をキーに、Bool型の値を保持する
+        let dict = ["firstLaunch": true]
+        // デフォルト値登録
+        // ※すでに値が更新されていた場合は、更新後の値のままになる
+        userDefault.register(defaults: dict)
+        // "firstLaunch"に紐づく値がtrueなら(=初回起動)、値をfalseに更新して処理を行う
+        if userDefault.bool(forKey: "firstLaunch") {
+            userDefault.set(false, forKey: "firstLaunch")
+            print("初回起動")
+        } else {
+            print("2回目以降")
+        }
+
         gotoMainStoryBoard()
+
         return true
     }
 

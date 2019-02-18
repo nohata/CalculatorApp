@@ -10,12 +10,19 @@ import UIKit
 
 class ToolViewController: UIViewController {
 
+    @IBAction func home(_ sender: Any) {
+        let mainSB = UIStoryboard(name: "Main", bundle: nil)
+        let mainVC = mainSB.instantiateInitialViewController()! as UIViewController
+
+        self.present(mainVC, animated: true, completion: nil)
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
-    
+
 
     /*
     // MARK: - Navigation

@@ -73,6 +73,18 @@
                                     <segue destination="wFG-8X-6uw" kind="show" id="gTb-bH-df6"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nos-9b-GkM">
+                                <rect key="frame" x="20" y="495" width="184" height="96"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <state key="normal" title="ツール(code)">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="EgL-UJ-uOo" kind="show" id="0L4-FT-qQt"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="NVj-9F-Kkf"/>
@@ -98,15 +110,24 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nTo-ST-T1I">
+                                <rect key="frame" x="138" y="103" width="149" height="62"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="home"/>
+                                <connections>
+                                    <action selector="home:" destination="3jG-iE-fzM" eventType="touchUpInside" id="bgP-eM-9G3"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="Dhr-VA-tBE"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="ホーム" id="3H0-hJ-fQX"/>
+                    <tabBarItem key="tabBarItem" title="ホーム" image="HomeIcon" selectedImage="HomeIcon" id="3H0-hJ-fQX"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kv5-7D-J7H" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4221.739130434783" y="26.785714285714285"/>
+            <point key="canvasLocation" x="1182.608695652174" y="760.71428571428567"/>
         </scene>
         <!--first-->
         <scene sceneID="bpC-bR-GKv">
@@ -127,13 +148,13 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="di9-WU-G4n"/>
                     </view>
-                    <tabBarItem key="tabBarItem" tag="1" title="first" id="GCq-2E-0Bi"/>
+                    <tabBarItem key="tabBarItem" tag="1" title="first" image="FirstIcon" selectedImage="FirstIcon" id="GCq-2E-0Bi"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rvs-CE-gWx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4892.753623188406" y="26.785714285714285"/>
+            <point key="canvasLocation" x="1842" y="761"/>
         </scene>
-        <!--second-->
+        <!--View Controller-->
         <scene sceneID="xZx-i7-hqJ">
             <objects>
                 <viewController id="ypj-Ho-G9M" sceneMemberID="viewController">
@@ -152,11 +173,11 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="V22-KS-Hw4"/>
                     </view>
-                    <tabBarItem key="tabBarItem" tag="2" title="second" id="djG-FB-hDn"/>
+                    <tabBarItem key="tabBarItem" tag="2" systemItem="favorites" id="djG-FB-hDn"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pXs-cb-Zs2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5547.826086956522" y="26.785714285714285"/>
+            <point key="canvasLocation" x="2571" y="761"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="w7Z-l3-OOh">
@@ -181,7 +202,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gK8-Om-4N9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6200" y="27"/>
+            <point key="canvasLocation" x="3291" y="761"/>
         </scene>
         <!--Information View Controller-->
         <scene sceneID="QXF-mQ-Bf2">
@@ -240,7 +261,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MYq-vq-AhE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="576.81159420289862" y="26.785714285714285"/>
+            <point key="canvasLocation" x="-907" y="-14"/>
         </scene>
         <!--Help View Controller-->
         <scene sceneID="wfr-Zf-XJ7">
@@ -272,7 +293,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ri8-f5-RVb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="577" y="804"/>
+            <point key="canvasLocation" x="-907" y="761"/>
         </scene>
         <!--Edit View Controller-->
         <scene sceneID="NpN-Wl-HoV">
@@ -323,7 +344,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Azr-aT-zsE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1197" y="804"/>
+            <point key="canvasLocation" x="-170" y="761"/>
         </scene>
         <!--Todo List View Controller-->
         <scene sceneID="rHv-j7-PL7">
@@ -386,7 +407,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5aV-9Z-M6H" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2100" y="27"/>
+            <point key="canvasLocation" x="593" y="27"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -628,7 +649,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-497" y="27"/>
+            <point key="canvasLocation" x="-1919" y="-14"/>
         </scene>
         <!--Next View Controller-->
         <scene sceneID="ZCS-Hu-UY8">
@@ -661,14 +682,15 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ed1-bC-9km" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-497" y="729"/>
+            <point key="canvasLocation" x="-1920" y="708"/>
         </scene>
         <!--Tool Tab View Controller-->
         <scene sceneID="qHP-mi-PaH">
             <objects>
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="wFG-8X-6uw" customClass="ToolTabViewController" customModule="CalculatorApp" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" backgroundImage="tooltab.png" id="Oec-MK-Djl">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Oec-MK-Djl">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
@@ -681,10 +703,26 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ppc-jG-W1I" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3311.594202898551" y="26.785714285714285"/>
+            <point key="canvasLocation" x="1778" y="27"/>
+        </scene>
+        <!--Tool Code View Controller-->
+        <scene sceneID="WqR-CO-ftC">
+            <objects>
+                <viewController id="EgL-UJ-uOo" customClass="ToolCodeViewController" customModule="CalculatorApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="K7l-m3-tbp">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="b2v-yP-Z1x"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fB6-ht-qDt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4860.8695652173919" y="26.785714285714285"/>
         </scene>
     </scenes>
     <resources>
-        <image name="tooltab.png" width="320" height="49"/>
+        <image name="FirstIcon" width="50" height="38"/>
+        <image name="HomeIcon" width="50" height="38"/>
     </resources>
 </document>
